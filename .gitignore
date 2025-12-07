@@ -24,8 +24,8 @@ build/
 out/
 
 # Environment variables
-.env
-.env.*.local
+backend/.env
+backend/.env.*.local
 
 # -----------------------------------------------------
 # Editor
