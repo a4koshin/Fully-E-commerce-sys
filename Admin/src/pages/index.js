@@ -1,0 +1,13 @@
+export { default as DashboardOverview } from './DashboardOverview.jsx'
+export { default as CategoriesPage } from './CategoriesPage.jsx'
+export { default as SubCategoriesPage } from './SubCategoriesPage.jsx'
+export { default as BrandsPage } from './BrandsPage.jsx'
+export { default as ProductsPage } from './ProductsPage.jsx'
+export { default as OrdersPage } from './OrdersPage.jsx'
+export { default as ReviewsPage } from './ReviewsPage.jsx'
+export { default as CouponsPage } from './CouponsPage.jsx'
+export { default as NotificationsPage } from './NotificationsPage.jsx'
+export { default as DeliveryPage } from './DeliveryPage.jsx'
+export { default as DriversPage } from './DriversPage.jsx'
+export { default as SettingsPage } from './SettingsPage.jsx'
+
