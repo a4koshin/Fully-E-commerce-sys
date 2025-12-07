@@ -92,9 +92,9 @@ const loadModels = (dir) => {
 const modelsPath = path.join(__dirname, "models");
 loadModels(modelsPath);
 // Mongoose setup
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 4001;
 mongoose
-  .connect(process.env.MONGODB_URL, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
