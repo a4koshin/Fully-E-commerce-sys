@@ -44,7 +44,7 @@ function App() {
           </Route>
         </Route>
 
-        {/* Catch-all */}
+        {/* Catch-all.  */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </AuthProvider>
