@@ -7,7 +7,7 @@ const categorySchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Provider",
     },
-    status: {
+    visibilty: {
       type: Number,
       enum: [0, 1, 2],
       default: 0,
