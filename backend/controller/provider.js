@@ -7,9 +7,6 @@ const sendEmail = require("../utils/sendEmail");
 const Token = require("../models/Token");
 const cloudinary = require("../utils/cloudinary");
 
-
-
-
 const registerProvider = asyncHandler(async (req, res) => {
   try {
     const { name, phone, email, password, roles } = req.body;
@@ -27,7 +24,7 @@ const registerProvider = asyncHandler(async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    const image = req.files.image 
+    const image = req.files.image;
     // ? req.files.image : undefined;
     let imageResult;
 
@@ -37,7 +34,7 @@ const registerProvider = asyncHandler(async (req, res) => {
         folder: "mabruuk",
       });
     }
-    console.log(req.files,'req.files')
+    console.log(req.files, "req.files");
 
     if (isNaN(phone)) {
       return res.status(400).json({ msg: "Invalid phone" });
@@ -56,7 +53,7 @@ const registerProvider = asyncHandler(async (req, res) => {
     res.status(201).json({ msg: "Provider registered" });
   } catch (error) {
     console.error(error);
-    res.status(500).json(error);
+    res.status(500).json({ msg: "Register failed", error });
   }
 });
 
@@ -174,7 +171,7 @@ const updateProvider = asyncHandler(async (req, res) => {
 const getProviderById = asyncHandler(async (req, res) => {
   try {
     const userId = req.params.id;
-    const user = await Provider.findById(userId)
+    const user = await Provider.findById(userId);
 
     if (!user) {
       return res.status(404).json({ msg: "Provider not found" });
@@ -215,8 +212,7 @@ const changePassword = asyncHandler(async (req, res) => {
   }
 });
 const getProviderProfile = asyncHandler(async (req, res) => {
-
- try {
+  try {
     const provider = await Provider.findById(req.user.id).select("-password");
     if (!provider) {
       return res.status(404).json({ message: "Provider not found" });
@@ -227,7 +223,6 @@ const getProviderProfile = asyncHandler(async (req, res) => {
     res.status(500).json({ message: "Server Error" });
   }
 });
-
 
 const forgotPassword = asyncHandler(async (req, res) => {
   const { email } = req.body;
@@ -335,5 +330,5 @@ module.exports = {
   changePassword,
   forgotPassword,
   resetPassword,
-  getProviderProfile
+  getProviderProfile,
 };
