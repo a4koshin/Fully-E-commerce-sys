@@ -7,6 +7,7 @@ const colorSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Provider",
     },
+    hexcode: String,
     status: {
       type: Number,
       enum: [0, 1, 2],
