@@ -7,6 +7,7 @@ const unitSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Provider",
     },
+    abbreviation: String,
     status: {
       type: Number,
       enum: [0, 1, 2],
