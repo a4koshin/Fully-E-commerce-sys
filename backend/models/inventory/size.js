@@ -7,6 +7,7 @@ const sizeSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Provider",
     },
+    measurement: String,
     status: {
       type: Number,
       enum: [0, 1, 2],
