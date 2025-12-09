@@ -31,13 +31,17 @@ const ItemSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category",
     },
-    unit: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Unit",
-    },
     subcategory: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "SubCategory",
+    },
+    brandName: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Brand",
+    },
+    unit: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Unit",
     },
     sizes: [
       {
@@ -45,13 +49,7 @@ const ItemSchema = new mongoose.Schema(
         ref: "Size",
       },
     ],
-    colors: [
-
-          {type: mongoose.Schema.Types.ObjectId,
-          ref: "Color",
-        },
-
-    ],
+    colors: [{ type: mongoose.Schema.Types.ObjectId, ref: "Color" }],
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Provider",
