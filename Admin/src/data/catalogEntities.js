@@ -1,23 +1,31 @@
 export const catalogModals = {
   category: {
     title: "Create category",
+    ediTitle: "Update Category",
     actionLabel: "category",
+    url: "/category",
+    updateUrl: "/category/:id",
     fields: [
-      { label: "Category name", placeholder: "e.g. Home office" },
-
       {
-        label: "Visibility",
+        label: "name",
+        placeholder: "e.g. Home office",
+      },
+      {
+        label: "status",
         component: "select",
         options: [
-          { value: "yes", label: "Yes" },
-          { value: "no", label: "No" },
+          { value: 0, label: "Yes" },
+          { value: 1, label: "No" },
         ],
       },
     ],
   },
+
   subCategory: {
     title: "Create sub-category",
     actionLabel: "sub-category",
+    url: "/category/subCategory",
+    updateUrl: "/subCategories/:id",
     fields: [
       { label: "Sub-category name", placeholder: "Wearables" },
       {
@@ -42,9 +50,12 @@ export const catalogModals = {
       },
     ],
   },
+
   brand: {
     title: "Invite brand partner",
     actionLabel: "brand",
+    url: "/brand",
+    updateUrl: "/brand/:id",
     fields: [
       { label: "Brand name", placeholder: "NovaWave" },
       {
@@ -69,9 +80,12 @@ export const catalogModals = {
       },
     ],
   },
+
   unit: {
     title: "Create measurement unit",
     actionLabel: "unit",
+    url: "/unit",
+    updateUrl: "/unit/:id",
     fields: [
       { label: "Unit name", placeholder: "Gram" },
       { label: "Abbreviation", placeholder: "g" },
@@ -92,9 +106,12 @@ export const catalogModals = {
       },
     ],
   },
+
   color: {
     title: "Create color swatch",
     actionLabel: "color",
+    url: "/color",
+    updateUrl: "/color/:id",
     fields: [
       { label: "Color name", placeholder: "Emerald Pulse" },
       { label: "HEX value", placeholder: "#06BE5F" },
@@ -106,9 +123,12 @@ export const catalogModals = {
       },
     ],
   },
+
   size: {
     title: "Create size option",
     actionLabel: "size",
+    url: "/size",
+    updateUrl: "/size/:id",
     fields: [
       { label: "Label", placeholder: "Large" },
       { label: "Measurement", placeholder: "42 cm" },
