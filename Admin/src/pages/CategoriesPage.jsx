@@ -24,6 +24,7 @@ const snapshotColumns = [
   { key: "title", label: "Category" },
   { key: "products", label: "Listed products" },
   { key: "growth", label: "Growth" },
+  { key: "growth", label: "Growth" },
 ];
 
 export default function CategoriesPage() {
