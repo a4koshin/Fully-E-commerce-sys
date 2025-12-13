@@ -29,7 +29,7 @@ export const catalogModals = {
     fields: [
       { label: "Sub-category name", placeholder: "Wearables" },
       {
-        label: "Parent category",
+        label: "category",
         component: "select",
         options: [
           { value: "electronics", label: "Electronics" },
@@ -38,15 +38,12 @@ export const catalogModals = {
         ],
       },
       {
-        label: "SKU forecast",
-        type: "number",
-        placeholder: "0",
-      },
-      {
-        label: "Description",
-        component: "textarea",
-        placeholder: "Outline focus for this sub-collection",
-        fullWidth: true,
+        label: "status",
+        component: "select",
+        options: [
+          { value: 0, label: "Yes" },
+          { value: 1, label: "No" },
+        ],
       },
     ],
   },
@@ -84,25 +81,18 @@ export const catalogModals = {
   unit: {
     title: "Create measurement unit",
     actionLabel: "unit",
-    url: "/unit",
+    url: "/category/unit",
     updateUrl: "/unit/:id",
     fields: [
       { label: "Unit name", placeholder: "Gram" },
       { label: "Abbreviation", placeholder: "g" },
       {
-        label: "Measurement type",
+        label: "status",
         component: "select",
         options: [
-          { value: "weight", label: "Weight" },
-          { value: "volume", label: "Volume" },
-          { value: "length", label: "Length" },
+          { value: 0, label: "Yes" },
+          { value: 1, label: "No" },
         ],
-      },
-      {
-        label: "Notes",
-        component: "textarea",
-        placeholder: "Usage guidance",
-        fullWidth: true,
       },
     ],
   },
